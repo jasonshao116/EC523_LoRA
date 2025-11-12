@@ -1,0 +1,7 @@
+torch
+transformers>=4.35.0
+datasets
+accelerate
+evaluate
+scikit-learn
+rich
