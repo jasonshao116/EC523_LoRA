@@ -14,7 +14,7 @@ from transformers import (
 @dataclass
 class Args:
     model_name: str = "gpt2"
-    max_steps: int = 800
+    max_steps: int = 4200 # one epoch
     lr: float = 5e-5          # usually smaller for full FT than LoRA
     batch_size: int = 16
     eval_batch_size: int = 32
@@ -24,7 +24,7 @@ class Args:
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--model_name", type=str, default="gpt2")
-    p.add_argument("--max_steps", type=int, default=800)
+    p.add_argument("--max_steps", type=int, default=4200)
     p.add_argument("--lr", type=float, default=5e-5)
     p.add_argument("--batch_size", type=int, default=16)
     p.add_argument("--eval_batch_size", type=int, default=32)
