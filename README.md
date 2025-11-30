@@ -9,13 +9,19 @@ python -m src.train.run_sst2_gpt2_lora --max_steps 800 --batch_size 16 --r 8 --a
 # Evaluate on validation
 python -m src.train.eval_cls --preds runs/sst2_val_preds.json --labels runs/sst2_val_labels.json
 ``` 
+Arguments in the command: 
+
 **max_steps 800**
 Run 800 optimization steps total, regardless of how many epochs that corresponds to. (800 steps ≈ 0.19 epochs) 
+
 **batch_size 16**
 Set the training batch size: each training step processes 16 examples. 
+
 **r 8**
 LoRA rank = 8
+
 **alpha 16**
 LoRA scaling factor 
+
 **dropout 0.05**
 Dropout applied before LoRA to help prevent overfitting
